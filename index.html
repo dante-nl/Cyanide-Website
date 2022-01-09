@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Cyanide</title>
+	<body onload="onLoad()"></body>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="Cyanide - custom theme for Discord" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/Images/Cyanide-Logo-Rounded.png" />
+	<meta property="og:description"
+		content="Cyanide is a theme for Powercord and Goosemod, that turns makes Discord more cyan" />
+	<meta property="theme-color" content="#5865F2" />
+	<link rel="stylesheet" href="style.css" />
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+		<h1>Introducing Cyanide</h1>
+		<!-- CSS switch -->
+	<div class="jscontent">
+	<div class="AlignItems">
+		<div class="AlignItems">
+			<h2>Enable Cyanide colors</h2>
+			<form action="changeCSS()">
+			<label class="switch">
+				<input type="checkbox" id="ToggleSwitch">
+				<span class="slider"></span>
+			</label>
+			</form>
+		</div>
+
+		<br>
+
+		<div class="AlignItems">
+			<h2>Dark mode</h2>
+			<form action="LightDark()">
+				<label class="switch">
+					<input type="checkbox" checked id="LightSwitch">
+					<span class="slider"></span>
+				</label>
+			</form>
+		</div>
+	</div>
+	<div id="AlertCyanide">
+		<!-- Alert here about switching color scheme too much -->
+	</div>
+	<div id="AlertDarkLight">
+		<!-- Alert here about switching color scheme too much -->
+	</div>
+
+		<br>
+
+		<div>
+			<!-- Small Cyanide preview -->
+			<div class="box" style="float: left; margin-right: 10px;">
+				<p><span style="color: #72767d; font-size: 0.6875rem; line-height: 1.375rem; margin-right: .25rem;">12:29 PM</span><span class="username" style="line-height: 1.375rem;">Someone</span><span class="message" style="color: #dcddde; margin-left: 5px">This is a message!</span></p>
+				<p><span style="color: #72767d; font-size: 0.6875rem; line-height: 1.375rem; margin-right: .25rem;">12:29 PM</span><span
+						class="username" style="line-height: 1.375rem;">Someone Else</span><span class="message"
+						style="color: #dcddde; margin-left: 5px">This is another message!</span></p>
+			</div>
+			<h1 style="text-align: left; margin-bottom: 0;">How does it look?</h1>
+			<p style="vertical-align: top;">Cyanide is a theme that keeps the basic look of Discord, but also does a unique spin on it with a more cyan-orientaded color palette. Cyanide works in dark mode, light mode, compact mode and cozy mode!</p>
+			<br>
+		</div>
+			<!-- How to install -->
+			<h1 style="text-align: left;">How do I install it?</h1>
+			<h3>Powercord</h3>
+			<p>You can install it for Powercord by copying a command and pasting it in your terminal of your choice. (Windows users: do <strong>NOT</strong> open it as an administrator!) This command doesn't work directly if you changed the name of your Powercord folder, so you need to replace "powercord" in <code>cd powercord</code> with the name of your folder.</p>
+			<a class="button" href="javascript:copyCommand()">Copy command</a>
+			<div style="display: none" id="CopyNote"></div>
+			<h3>GooseMod</h3>
+			<p> Cyanide is not available <strong>YET</strong> on GooseMod, we will update this as soon as it is available on GooseMod</p>
+			<!-- Join Discord -->
+			<h1 style="text-align: left;">Is there a Discord that I can join?</h1>
+			<p>Yes! Cyanide has its own Discord server, that is optimized for Cyanide, with a custom bot, channel names and even a few special icon!</p>
+			<a class="button" href="https://discord.gg/KyUAyK3hhy" target="_blanc">Join Discord</a>
+			<!-- About tags -->
+		<div style="text-align: right;">
+			<div class="box" style="float: right; margin-right: 10px;">
+				<p><span style="color: #72767d; font-size: 0.6875rem; line-height: 1.375rem; margin-right: .25rem;">12:29
+						PM</span><span id="tag" class="tag" style="display: none">CYANIDE CONTRIBUTOR</span><span class="username" style="line-height: 1.375rem;">Human</span><span class="message"
+						style="color: #dcddde; margin-left: 5px">This is a message, sent by a contributor!</span></p>
+				<p><span style="color: #72767d; font-size: 0.6875rem; line-height: 1.375rem; margin-right: .25rem;">12:29 PM</span><span
+						class="username" style="line-height: 1.375rem;">Someone</span><span class="message"
+						style="color: #dcddde; margin-left: 5px">I'm Someone and I don't have a tag :(</span></p>
+				<p><span style="color: #72767d; font-size: 0.6875rem; line-height: 1.375rem; margin-right: .25rem;">12:29 PM</span><span
+						class="username" style="line-height: 1.375rem;">Someone Else</span><span class="message"
+						style="color: #dcddde; margin-left: 5px">I'm Someone Else and I also don't have a tag D:</span></p>
+			</div>
+			<h1 style="text-align: right; margin-bottom: 0;">Tags? Tell me more!</h1>
+			<p style="vertical-align: top;">You can get a tag by receiving one from the creator (dante_nl#1234) or by contributing. An example of a contributor is shown on the right. Looks pretty nice, right? (Because these are only visible to people who are using Cyanide, you need to enable the Cyanide colors to see them)</p>
+			<div class="AlignItems" style="text-align: right !important; align-items: right !important;">
+				<h2>Can't see it? Enable Cyanide colors!</h2>
+				<form action="changeCSS2()">
+					<label class="switch">
+						<input type="checkbox" id="ToggleSwitch2">
+						<span class="slider"></span>
+					</label>
+				</form>
+			</div>
+		</div>
+		</div>
+	</div>
+	<noscript>
+		<style type="text/css">
+			.jscontent {
+				display: none;
+			}
+
+			img {
+				width: 60%;
+				border-radius: 8px;
+			}
+		</style>
+		<div class="alert"><strong>You have JavaScript disabled! </strong>For the optimal experience, like copying the installation command for Powercord or interactive previews, please enable JavaScript!</div>
+		<img style="float: left; margin-right: 10px;" src="/Images/Cyanide Preview.png">
+		<h1 style="text-align: left; margin-bottom: 0;">How does it look?</h1>
+		<p style="vertical-align: top;">Cyanide is a theme that keeps the basic look of Discord, but also does a unique spin on
+			it with a more cyan-orientaded color palette. Cyanide works in dark mode, light mode, compact mode and cozy mode!
+		</p>
+		<br>
+		<h1 style="text-align: left;">How do I install it?</h1>
+		<h3>Powercord</h3>
+		<p>You can install it for Powercord by copying a command and pasting it in your terminal of your choice. (Windows users: do <strong>NOT</strong> open it as an administrator!). This command doesn't work directly if you changed the name of your Powercord folder, so you need to replace "powercord" in <code>cd powercord</code> with the name of your folder.</p>
+		<code>cd powercord/src/Powercord/themes && git clone https://github.com/dante-nl/Cyanide</code>
+		<h3>GooseMod</h3>
+		<p>Cyanide is not available <strong>YET</strong> on GooseMod, we will update this as soon as it is available on
+			GooseMod</p>
+	</noscript>
+
+	<script>
+		document.getElementById("ToggleSwitch").oninput = function () { changeCSS() };
+		document.getElementById("ToggleSwitch2").oninput = function () { changeCSS2() };
+		document.getElementById("LightSwitch").oninput = function () { LightDark() };
+
+		function onLoad() {
+			CyanideSwitch = "off"
+			LightSwitch = "off"
+			startDate = null
+			startDateDarkLight = null
+			TimesSwitchedCyanide = 0
+			TimesSwitchedDarkLight = 0
+			console.log("Loaded the page! :D")
+		}
+
+		// Reload page
+		function reload() {
+			console.log("Reloading the page!")
+			location.reload();
+		}
+
+		// Enabling/Disabling Cyanide colors
+		function changeCSS() {
+			if(startDate!=null) {
+				var endDate = new Date();
+				var seconds = (endDate.getTime() - startDate.getTime()) / 1000;
+				if(seconds <= 0.5) {
+					if(TimesSwitchedCyanide <= 15) {
+						TimesSwitchedCyanide += 1
+					} else {
+						document.getElementById("AlertCyanide").innerHTML = "<br><span class='alert'><strong>Slow down!</strong> You're switching between enabling and disabling Cyanide colors too fast! Please reload the page to start switching again. <a href='javascript:reload()'>Reload the page</a>"
+						document.getElementById("ToggleSwitch").disabled = true
+						document.getElementById("ToggleSwitch2").disabled = true
+						if (LightSwitch == "on") {
+							document.body.classList.remove("cyanide-light")
+							document.body.classList.remove("cyanide")
+							document.body.classList.remove("cyanide-box")
+							document.body.classList.remove("cyanide-light-box")
+							document.body.classList.add("light")
+							document.body.classList.add("light-box")
+						} else {
+							document.body.classList.remove("cyanide-light")
+							document.body.classList.remove("cyanide")
+							document.body.classList.remove("cyanide-box")
+							document.body.classList.remove("cyanide-light-box")
+						}
+					}
+				}
+			} 
+			startDate = new Date()
+			if(CyanideSwitch == "off" || CyanideSwitch === null) {
+				if (LightSwitch == "on") {
+					document.body.classList.add("cyanide-light")
+					document.body.classList.add("cyanide")
+					document.body.classList.add("cyanide-light-box")
+				} else {
+					document.body.classList.remove("cyanide-light")
+					document.body.classList.add("cyanide")
+					document.body.classList.add("cyanide-box")
+					document.body.classList.remove("cyanide-light-box")
+				}
+				document.getElementById("tag").style.display = "inline-block"
+				console.log("The Cyanide colors are now enabled!")
+				document.getElementById("ToggleSwitch").checked = true
+				document.getElementById("ToggleSwitch2").checked = true
+				CyanideSwitch = "on"
+			} else {
+				if (LightSwitch == "on") {
+					document.body.classList.remove("cyanide-light")
+					document.body.classList.remove("cyanide")
+					document.body.classList.remove("cyanide-box")
+					document.body.classList.remove("cyanide-light-box")
+					document.body.classList.add("light")
+					document.body.classList.add("light-box")
+				} else {
+					document.body.classList.remove("cyanide-light")
+					document.body.classList.remove("cyanide")
+					document.body.classList.remove("cyanide-box")
+					document.body.classList.remove("cyanide-light-box")
+				}
+				document.getElementById("tag").style.display = "none"
+				console.log("The Cyanide colors are now disabled!")
+				CyanideSwitch = "off"
+				document.getElementById("ToggleSwitch").checked = false
+				document.getElementById("ToggleSwitch2").checked = false
+			}
+		}
+
+		function changeCSS2() {
+			console.log("Clicked the 2nd switch!")
+			changeCSS()
+		}
+
+		// Switching light mode / dark mode
+		function LightDark() {
+			if(startDateDarkLight!=null) {
+				var endDateDarkLight = new Date();
+				var secondsDarkLight = (endDateDarkLight.getTime() - startDateDarkLight.getTime()) / 1000;
+				if (secondsDarkLight <= 0.5) {
+					if (TimesSwitchedDarkLight <= 15) {
+						TimesSwitchedDarkLight += 1
+					} else {
+						document.getElementById("AlertDarkLight").innerHTML = "<br><span class='alert'><strong>Slow down!</strong> You're switching between dark mode and light mode too fast! Please reload the page to start switching again. <a href='javascript:reload()'>Reload the page</a>"
+						document.getElementById("LightSwitch").disabled = true
+						document.getElementById("LightSwitch").classList.add("disabled")
+						if (CyanideSwitch == "on") {
+							document.body.classList.remove("cyanide-light")
+							document.body.classList.remove("cyanide")
+							document.body.classList.remove("cyanide-box")
+							document.body.classList.remove("cyanide-light-box")
+							document.body.classList.add("light")
+							document.body.classList.add("light-box")
+						} else {
+							document.body.classList.remove("cyanide-light")
+							document.body.classList.remove("cyanide")
+							document.body.classList.remove("cyanide-box")
+							document.body.classList.remove("cyanide-light-box")
+						}
+					}
+				}
+			}
+			startDateDarkLight = new Date()
+			if (LightSwitch == "off" || LightSwitch == null) {
+				if(CyanideSwitch == "on") {
+					document.body.classList.add("light")
+					document.body.classList.add("cyanide-light")
+					document.body.classList.add("cyanide-light-box")
+				} else {
+					document.body.classList.add("light")
+					document.body.classList.add("light-box")
+					document.body.classList.remove("cyanide-light")
+					document.body.classList.remove("cyanide")
+					document.body.classList.remove("cyanide-box")
+					document.body.classList.remove("cyanide-light-box")
+				}
+				LightSwitch = "on"
+				console.log("The theme is now light D:")
+			} else {
+				if (CyanideSwitch == "on") {
+					document.body.classList.remove("light")
+					document.body.classList.remove("cyanide-light")
+					document.body.classList.add("cyanide")
+					document.body.classList.remove("cyanide-light-box")
+					document.body.classList.remove("light-box")
+					document.body.classList.add("cyanide-box")
+				} else {
+					document.body.classList.remove("light")
+					document.body.classList.remove("cyanide-light")
+					document.body.classList.remove("cyanide")
+					document.body.classList.remove("cyanide-light-box")
+					document.body.classList.remove("light-box")
+				}
+				LightSwitch = "off"
+				console.log("The theme is now dark :D")
+			}
+		}
+
+		// Copying text
+		function copyText(text) {
+			var textField = document.createElement('textarea');
+			textField.innerText = text;
+			document.body.appendChild(textField);
+			textField.select();
+			document.execCommand('copy');
+			textField.remove();
+				
+		}
+
+		// Copying command
+		function copyCommand() {
+			copyText("cd powercord/src/Powercord/themes && git clone https://github.com/dante-nl/Cyanide")
+			var x = document.getElementById("CopyNote")
+			if (x.style.display === "none") {
+				x.style.display = "block"
+			}
+			x.innerHTML = "<span style='color: #57F287'>Copied!</span> Did it not copy (properly)? You can manually copy this: <br><code>cd powercord/src/Powercord/themes && git clone https://github.com/dante-nl/Cyanide</code>"
+		}
+	</script>
+</body>
+
+</html>
