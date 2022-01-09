@@ -1,0 +1,263 @@
+/* Font; Roboto, 400 thickness. From Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* Main style */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #36393e;
+  color: #fff
+}
+
+a {
+  color: #5865F2
+}
+
+h1 {
+  text-align: center;
+}
+
+.cyanide {
+  background-color: #000;
+  color: #fff;
+}
+
+.cyanide h1 {
+  color: #14746F;
+}
+
+.cyanide a {
+  color: #14746F
+}
+
+.cyanide-light {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.cyanide-light a {
+  color: #88D4AB
+}
+
+.cyanide-light h1 {
+  color: #88D4AB !important;
+}
+
+/* Regular light mode */
+.light {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+/* Align items */
+.AlignItems {
+  display: flex;
+  align-items: center;
+}
+
+/* Switch */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input.disabled + .slider {
+  background-color: #e63946 !important;
+}
+
+input:disabled + .slider {
+  background-color: #e63946;
+}
+input:checked + .slider {
+  background-color: #5865F2;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #5865F2;
+}
+
+.cyanide input:checked + .slider {
+  background-color: #14746F;
+}
+
+.cyanide input:focus + .slider {
+  box-shadow: 0 0 1px #14746F;
+}
+.cyanide-light input:checked + .slider {
+  background-color: #88D4AB !important;
+}
+
+.cyanide-light input:focus + .slider {
+  box-shadow: 0 0 1px #88D4AB !important;
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.box {
+  align-self: left;
+  text-align: left;
+  border: 1px solid #5865F2;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 8px;
+  margin-left: 5px
+}
+
+.box p {
+  color: #fff
+}
+
+.box .message {
+  color: #dcddde
+}
+
+.light .box {
+  align-self: left;
+  text-align: left;
+  border: 1px solid #5865F2;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.light .box .username {
+  color: #000 !important
+}
+
+.light .box .message {
+  color: #2e3338 !important
+}
+
+.cyanide .box {
+  border: 1px solid #14746F !important;
+}
+
+.cyanide .box .username {
+  color: #14746F !important
+}
+
+.cyanide .box .message {
+  color: #dcddde !important
+}
+
+.cyanide-light .box {
+  border: 1px solid #88D4AB !important;
+}
+
+.cyanide-light .box .username {
+  color: #88D4AB !important
+}
+
+.cyanide-light .box .message {
+  color: #2e3338 !important
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: #5865F2;
+  font-size: 20px;
+  color: #fff !important;
+  text-decoration: none;
+}
+.button:hover,
+.button:focus {
+  background-color: #6974f3
+}
+
+.cyanide .button {
+  background-color: #14746F;
+}
+
+.cyanide .button:hover,
+.button:focus {
+  background-color: #248277;
+}
+
+.cyanide-light .button {
+  background-color: #88D4AB;
+}
+.cyanide-light .button:hover,
+.button:focus {
+  background-color: #99E2B4;
+}
+
+.cyanide .tag {
+	border: 1px solid #14746F;
+	border-radius: 3px;
+	margin-right: 5px;
+	color: #fff;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	line-height: 1.3;
+	font-size: 10px;
+  font-weight: 500;
+}
+
+.cyanide-light .tag {
+  border: 1px solid #88D4AB;
+	border-radius: 3px;
+	margin-right: 5px;
+	color: #000;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	line-height: 1.3;
+	font-size: 10px;
+  font-weight: 500;
+}
+
+/* Alert */
+.alert {
+  padding: 20px;
+  background-color: #e63946;
+  color: white;
+	border-radius: 8px;
+}
