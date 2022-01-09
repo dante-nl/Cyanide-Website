@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Cyanide Source Redirect</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Cyanide - redirect to source code" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/Images/Cyanide-Logo-Rounded.png" />
+<meta property="og:description"
+	content="Redirect to the Github" />
+<meta property="theme-color" content="#56AB91" />
+<link rel="stylesheet" href="style.css" />
+<meta charset="utf-8" />
+<link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta http-equiv="refresh" content="5; URL=https://github.com/dante-nl/Cyanide" />
+<style>
+	.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.cube1, .cube2 {
+  background-color: #56AB91;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+@-webkit-keyframes sk-cubemove {
+  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+  100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes sk-cubemove {
+  25% { 
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  } 50% { 
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  } 50.1% { 
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  } 75% { 
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  } 100% { 
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+</style>
+</head>
+
+<body>
+	<h1>Redirecting you to the source code...</h1>
+	<p style="text-align: center;">If you don't get redirected after 5 seconds, click <a href="https://github.com/dante-nl/Cyanide">here</a></p>
+	<div class="spinner">
+		<div class="cube1"></div>
+		<div class="cube2"></div>
+	</div>
+	
+</body>
+
+</html>
